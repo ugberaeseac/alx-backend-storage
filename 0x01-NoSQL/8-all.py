@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 function that lists all documents in a collection
 returns an empty list if no document in the collection
