@@ -27,6 +27,7 @@ def count_calls(self, method: Callable) -> Callable:
         self._redis.incr(key)
         return method(self, *args, **kwargs)
 
+
 class Cache():
     """
     class Cache
@@ -37,7 +38,7 @@ class Cache():
         """
         self._redis = redis.Redis()
         self._redis.flushdb()
-    
+
     @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
