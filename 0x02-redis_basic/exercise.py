@@ -55,4 +55,8 @@ class Cache():
         parametrize to an integer
         """
         val = self.redis.get(key).decode('utf-8')
-        return int(val)
+        try:
+            int_val = int(val)
+        except Exception:
+            int_val = 0
+        return int_val
