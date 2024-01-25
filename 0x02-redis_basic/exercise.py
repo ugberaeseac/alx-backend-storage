@@ -50,13 +50,14 @@ class Cache():
         val = self._redis.get(key).decode('utf-8')
         return val
 
-    def get_int(self, key: str) -> int:
-        """
+  """  def get_int(self, key: str) -> int:
+        
         parametrize to an integer
-        """
+        
         val = self._redis.get(key)
         try:
             int_val = int(val.decode('utf-8'))
         except Exception:
             int_val = 0
         return int_val
+        """
