@@ -54,7 +54,7 @@ class Cache():
         """
         parametrize to an integer
         """
-        val = self.redis.get(key).decode('utf-8')
+        val = self._redis.get(key).decode('utf-8')
         try:
             int_val = int(val)
         except Exception:
