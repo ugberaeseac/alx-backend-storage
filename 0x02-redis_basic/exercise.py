@@ -26,6 +26,7 @@ def count_calls(self, method: Callable) -> Callable:
         """
         self._redis.incr(key)
         return method(self, *args, **kwargs)
+    return wrapper
 
 
 class Cache():
